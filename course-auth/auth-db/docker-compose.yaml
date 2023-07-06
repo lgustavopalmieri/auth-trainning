@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  auth-api-db:
+    image: postgres:14.1
+    container_name: auth-api-db
+    restart: always
+    env_file:
+      - ./config.env
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    networks:
+      - auth-api-net-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - auth-api-vol-db:/var/lib/postgresql/data
+
+networks:
+  auth-api-net-db:
+    name: auth-api-net-db
+
+volumes:
+  auth-api-vol-db:
+    name: auth-api-vol-db

@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2021",
+    "lib": [
+      "es6",
+      "dom",
+      "es2015.promise"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "allowJs": true,
+  }, 
+  "include": [
+    "src",
+    "ormconfig.js",
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
+
